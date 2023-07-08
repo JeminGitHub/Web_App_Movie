@@ -1,0 +1,9 @@
+Developed a movie web application using Python, Django, HTML, CSS, and Bootstrap.
+Implemented CRUD functionality using function-based views, allowing users to Create, Read, Update, and Delete movie records.
+Designed user account creation and authentication system, providing users with the ability to sign up, sign in, and sign out.
+Utilized Django's built-in authentication system for secure user management.
+Implemented front-end using HTML, CSS, and Bootstrap, ensuring an appealing and user-friendly interface.
+Integrated a backend database using SQLite to store movie information and user data securely.
+Ensured responsive design, allowing the application to be accessed and used seamlessly across different devices.
+Employed Django's templating engine to dynamically render HTML pages and display movie data.
+Implemented appropriate security measures to protect user data and prevent unauthorized access.
