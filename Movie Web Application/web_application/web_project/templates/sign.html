@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block style %}
+.custom-rounded {
+  border-radius: 10px;
+}
+.bg-opacity {
+  background-color: rgba(0, 0, 0, 0.5); /* Black color with 70% opacity */
+  color: white; /* Text color */
+}
+{% endblock %}
+{% block content %}
+
+{% load crispy_forms_tags %}
+<div class="container w-25   p-3 bg-opacity custom-rounded text-center ">
+<div class="container bg-dark p-3 text-white"><div class="container py-5">
+  <h1>Login</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {{ login_form|crispy }}
+    <button class="btn btn-primary " type="submit">
+  <i class="fas fa-sign-in-alt"></i>
+</button>
+  </form>
+  <p class="text-center">Don't have an account? <a href="{% url 'credentials:signup' %}">Create an account</a>.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

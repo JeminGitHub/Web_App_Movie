@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %} Confirmation {% endblock %}
+
+{% block style %}
+  .custom-alert {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+  }
+
+
+{% endblock %}
+{% block content %}
+
+
+
+
+<div class="container bg-opacity">
+
+  <div class="alert custom-alert text-white text-center" role="alert">
+    <form method="POST">
+      {% csrf_token %}
+    <h4>Are You Sure Want You Delete!</h4>
+       <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

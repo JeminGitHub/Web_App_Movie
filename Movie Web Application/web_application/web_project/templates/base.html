@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+<html>
+<head>
+  <title>{% block title %} {% endblock %}</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+      body {
+      margin: 0;
+      padding: 0;
+    }
+
+     .black-yellow-section {
+      background: linear-gradient(45deg, black, yellow);
+      padding: 100px;
+      color: white;
+      min-height: calc(100vh - 56px - 100px); /* Subtract navbar height and padding */
+    }
+
+        .social-icons {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .social-icons li {
+      margin-right: 10px;
+    }
+
+    .social-icons li:last-child {
+      margin-right: 0;
+    }
+
+    .social-icons a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+
+{% block style %} {% endblock %}
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
+    <!-- Navbar content -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'myapp:home' %}">Movie Bazar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-warning" href="{% url 'myapp:home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-warning" href="{% url 'myapp:user' %}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-warning" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-warning" href="{% url 'myapp:movies' %}">Movies</a>
+        <li class="nav-item">
+          <a class="nav-link text-warning" href="{% url 'credentials:signup' %}">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  </nav>
+
+  <div class="black-yellow-section">
+     {% block content %}
+
+  <!-- Black and Yellow Section -->
+
+
+
+
+
+
+
+
+
+
+
+ {% endblock %}
+</div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center p-3 fixed-bottom">
+     <footer class="footer" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; 2023 Jemin Mathew. All rights reserved.</p>
+        </div>
+        <div class="col-md-6">
+          <ul class="social-icons">
+            <li><a href="mailto:jeminthw997@gmail.com"><i class="far fa-envelope"></i>Gmail</a></li>
+
+
+            <li><a href="https://www.linkedin.com/in/jemin-mathew-584908279"><i class="fab fa-linkedin"></i>Linkedin</a></li>
+
+            <li><a href="https://github.com/JeminGitHub"><i class="fab fa-github"></i>GitHub</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </footer>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

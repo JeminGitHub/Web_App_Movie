@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}User {% endblock %}
+{% block style %}
+.custom-rounded {
+  border-radius: 10px;
+}
+.bg-opacity {
+  background-color: rgba(0, 0, 0, 0.5); /* Black color with 70% opacity */
+  color: white; /* Text color */
+}
+{% endblock %}
+{% block content %}
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<div class="container text-center  p-3 bg-opacity custom-rounded text-left">
+<div class="card bg-dark text-dark">
+<div class="card">
+  <img src="{% static '/images/pp1.jpg' %}" class="card-img-top" alt="Profile Photo">
+  <div class="card-body">
+    <h5 class="card-title">Jemin Mathew</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Python Full Stack Developer</h6>
+    <p class="card-text">To kickstart my career in the IT industry as a fresher,
+      seeking a challenging position in an esteemed organization.
+      I aim to apply and further develop my technical skills and knowledge in software development,
+      web development, or database management. With a strong foundation in programming languages and a passion for continuous learning,
+      I am eager to contribute to the success of the company by leveraging my problem-solving abilities, teamwork skills, and adaptability. </p>
+    <ul class="list-group text-center">
+      <li class="list-group-item">Education: Master Of Computer Application <br> Bcom Computer Application</li>
+      <li class="list-group-item">Experience: Python Develop Intern @<br> Inmakes Infotech</li>
+      <li class="list-group-item">Projects: E-Commerce Project, Hospital Management Project,Movie Web Application<br>Todo Application, Crud Application</li>
+  <li class="list-group-item">
+  Skills:
+  <div class="d-flex justify-content-center">
+    <i class="fab fa-python mx-2"></i>
+    <i class="fab fa-django mx-2"></i>
+    <i class="fab fa-css3-alt mx-2"></i>
+    <i class="fab fa-html5 mx-2"></i>
+    <i class="fab fa-bootstrap mx-2"></i>
+    <i class="fas fa-database mx-2"></i>
+    <i class="fab fa-github mx-2"></i>
+  </div>
+</li>
+
+
+    </ul>
+    </div>
+    <a href="https://github.com/JeminGitHub" class="btn btn-primary">
+  <i class="fab fa-github"></i> GitHub
+</a>
+
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+</div>
+{% endblock %}

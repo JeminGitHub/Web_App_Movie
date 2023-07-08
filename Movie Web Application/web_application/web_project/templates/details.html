@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Home {% endblock %}
+{% block style %}
+
+{% endblock %}
+{% block content %}
+
+
+
+<!--<div class="card bg-dark text-yellow" style="width: 20rem; ">-->
+<!--    <img src="{{movie.img.url}}" class="card-img-top" alt="...">-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">{{movie.name}}</h5>-->
+<!--      <h6 class="card-title">{{movie.year}}</h6>-->
+<!--    <p class="card-text">{{movie.desc}}</p>-->
+<!--    <a href="#" class="btn btn-warning">Watch Now</a>-->
+<!--  </div>-->
+<!--  <video class="card-img-top" src="path/to/video.mp4" controls></video>-->
+<!--</div>-->
+<div class="card bg-dark text-yellow">
+  <div class="card-header">{{movie.name}}</div>
+  <div class="card-body">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="row">
+      <div class="col-4">
+        <img src="{{movie.img.url}}" class="img-fluid" alt="Movie Poster">
+      </div>
+      <div class="col-8">
+        <h5 class="card-title">{{movie.name}}</h5>
+        <h6 class="card-title">{{movie.year}}</h6>
+        <p class="card-text">{{movie.desc}}</p>
+        <a href="#" class="btn btn-warning text-black">Watch Now</a>
+
+        <a href="{% url 'myapp:updates' movie.id %}" class="btn btn-primary text-black">Update</a>
+        <a href="{% url 'myapp:delete' movie.id %}" class="btn btn-danger text-black">Delete</a>
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
